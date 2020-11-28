@@ -9,8 +9,9 @@ const MONGO_URL = process.env.url;
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-var Publisher = require('./editoriales');
-var Book = require('./libros');
+const path = require('path');
+var Publisher = require(path.join(__dirname+ './editoriales'));
+var Book = require(path.join(__dirname+ './libros'));
 
 router.get('/', (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
