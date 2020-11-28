@@ -5,7 +5,7 @@ var db = require('./db');
 
 
 
-var router = require(path.join(__dirname+ './books/router'));
+var router = require(path.join(__dirname+ '/books/router'));
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname+ '/public/index.html'))
