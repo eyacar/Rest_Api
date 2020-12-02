@@ -69,8 +69,7 @@ router.get('/editorial', (req, res) => {
 });
 
 router.get('/editorial/:editorial', function (req, res) {
-
-
+res.header('Access-Control-Allow-Origin', '*');
     MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, function(err, db) {
         if (err) throw err;
         var dbo = db.db("libreria");
